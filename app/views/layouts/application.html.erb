@@ -17,7 +17,7 @@
       <div class="navbar">
         <ul class="nav-lists">
           <% if user_signed_in? %>
-            <%= link_to "recipeを書く" %>
+            <%= link_to "recipeを書く", new_recipe_path %>
             <%= link_to "recipeを見る" %>
             <%= link_to "recipe検索" %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
