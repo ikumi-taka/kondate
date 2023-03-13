@@ -34,16 +34,22 @@ ul,li {
 }
 
 /* ヘッダー */
-.header {
+.top-page-header {
   height: 50px;
   background-color: #f0f0f0;
   padding: 10px 0;
   display: flex;
+  text-decoration: none;
 }
 
 .heading{
   width: 50%;
   margin-left: 30px;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 25px;
 }
 
 .navbar{

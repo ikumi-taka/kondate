@@ -10,24 +10,27 @@
   </head>
 
   <body>
-  <header>
-      <div class="heading">
-        <h1 class="title"> Kondate</h1>
-      </div>
-      <div class="navbar">
-        <ul class="nav-lists">
-          <% if user_signed_in? %>
-            <%= link_to "recipeを書く", new_recipe_path %>
-            <%= link_to "recipeを見る" %>
-            <%= link_to "recipe検索" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "ログイン", new_user_session_path %>
-            <%= link_to "新規登録", new_user_registration_path %>
-          <% end %>
-        </ul>
-      </div>
-    </header>
+  <header class="top-page-header">
+    <div class="heading">
+      <a href="/">
+      <div class="title"> Kondate</div>
+      <%# <%= link_to "Kondate", root_path, class="title" %>
+      </a>
+    </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+        <% if user_signed_in? %>
+          <%= link_to "recipeを書く", new_recipe_path %>
+          <%= link_to "recipeを見る" %>
+          <%= link_to "recipe検索" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
+        <% end %>
+      </ul>
+    </div>
+  </header>
     <%= yield %>
   <footer>
       <p>Copyright(c) kondate ALL RIGHT RESERVED.</p>
