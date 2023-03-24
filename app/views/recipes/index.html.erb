@@ -1,0 +1,7 @@
+<div class="recipes-page_header">
+  <% @recipe.each do |recipe| %>
+    <div class="recipes-list">
+      <%= link_to recipe.recipe_name , recipes_path(recipe.id)%>
+    </div>
+  <% end %>
+</div>

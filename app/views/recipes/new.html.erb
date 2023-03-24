@@ -1,0 +1,51 @@
+<div class="recipe-create-form">
+  <h1>recipeを書く</h1>
+  <%# 料理の写真 %>
+  <%# <div class=""> %>
+  <%# recipeのタイトル %>
+  <%= form_with model: @recipe, local: true do |f| %>
+      <div class="recipe-create__title">
+        <%= f.label :recipe_name, :recipeのタイトル, class: 'kondate-form__label' %>
+      </div>
+      <div class="recipe-create__content">
+        <%= f.text_field :recipe_name, class: 'kondate-form__input', placeholder: '例：みんな大好き♡生姜焼き' %>
+      </div>
+
+    <%# ジャンル %>
+    <div class="recipe-create__title">
+      <%= f.label :genre, :ジャンル, class: 'kondate-form__label' %>
+    </div>
+    <div class="recipe-create__content">
+      <%= f.text_field :genre, class: 'kondate-form__input' %>
+    </div>
+
+    <%# 材料 %>
+    <div class="recipe-create__title">
+      <%= f.label :food, :材料, class: 'kondate-form__label' %>
+    </div>
+    <div class="recipe-create__content">
+      <%= f.text_field :food,  class: 'recipe-form__input' %>
+    </div>
+
+    <%# 分量 %>
+    <div class="recipe-create__title">
+      <%= f.label :quantity, :分量, class: 'kondate-form__label' %>
+    </div>
+    <div class="recipe-create__content">
+      <%= f.text_field :quantity,  class: 'recipe-form__input' %>
+    </div>
+
+    <%# 調理工程 %>
+    <div class="recipe-create__title">
+      <%= f.label :content, :調理工程, class: 'kondate-form__label' %>
+    </div>
+    <div class="recipe-create__content">
+      <%= f.text_field :content, class: 'rkondate-form__input' %>
+    </div>
+    
+    <%# 登録ボタン %>
+    <%= f.submit "登録" %>
+  <% end %>
+  
+
+</div>
